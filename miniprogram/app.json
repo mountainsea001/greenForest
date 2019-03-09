@@ -1,0 +1,45 @@
+{
+  "pages": [
+
+    "pages/index/index",
+    "pages/goodsConfig/goodsConfig",
+    "pages/person/person",
+    "pages/configPage/configPage",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib"
+
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "home",
+        "iconPath":"images/home_light2.png",
+        "selectedIconPath":"images/home_light1.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "personal",
+        "iconPath":"images/user.png",
+        "selectedIconPath":"images/user1.png"
+
+      }
+    ],
+    "color":"#e3e3e3",
+    "selectedColor":"#ffffff",
+    "borderStyle":"white",
+    "backgroundColor":"#ff5500"
+  },
+  "window": {
+    "backgroundColor": "#f60",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f60",
+    "navigationBarTitleText": "小森林云烘焙",
+    "navigationBarTextStyle": "white",
+    "cloud": true
+  }
+}

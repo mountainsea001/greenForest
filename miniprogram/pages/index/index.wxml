@@ -1,0 +1,66 @@
+
+<view class="container">
+  <!--  <import src="../../template/nav/nav" />
+    <view class="flex fix_nav_wp">
+        <block wx:for="{{navData}}" wx:key="">
+            <template is="nav" data="{{...item}}"/>
+        </block>
+    </view>-->
+    <view class="content">
+        <view class="swiper-container">
+            <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+                <swiper-item wx:for="{{imgUrls}}" wx:key="index" class="{{cardCur==index?'cur':''}}" wx:for-index="index" wx:for-item="item">
+                    <image class='bg-img shadow-blur' src="{{item.swiperImg}}"></image>
+                </swiper-item>
+            </swiper>
+        </view>
+        <ul class="goods_container">
+            <li wx:for="{{goodsData}}" wx:for-index="index" wx:key="index" wx:for-item="item">
+                <image src="{{item.imgUrl}}"></image>
+                <text>{{item.desc}}</text>
+            </li>
+        </ul>
+    </view>
+  <!-- <view class="bot_bar">
+        <view style="color:#fff" class="navigator" bindtap="goToHome">
+            <view class="iconfont icon-home_light"></view>
+            Home
+        </view>
+        <button wx-if="{{!logged}}"   open-type="getUserInfo"
+              bindgetuserinfo="onGetUserInfo" class="getUserInfo">
+            <view class="iconfont icon-profile_light"></view>
+            auth
+        </button>
+        <view wx-if="{{logged}}" class="navigator" bindtap="goToPerson">
+            <view class="iconfont icon-friend"></view>
+            Person
+        </view>
+    </view>-->
+<!--      &lt;!&ndash; 上传图片 &ndash;&gt;
+     <view class="uploader">
+         <view class="uploader-text" bindtap="doUpload">
+             <text>上传图片</text>
+         </view>
+         <view class="uploader-container" wx:if="{{imgUrl}}">
+             <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+         </view>
+     </view>
+
+     &lt;!&ndash; 操作数据库 &ndash;&gt;
+     <view class="uploader">
+         <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
+             <text>前端操作数据库</text>
+         </navigator>
+     </view>
+
+     &lt;!&ndash; 新建云函数 &ndash;&gt;
+     <view class="uploader">
+         <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
+             <text>快速新建云函数</text>
+         </navigator>
+     </view>
+     新建云函数 -->
+
+</view>
+
+

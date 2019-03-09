@@ -1,0 +1,14 @@
+<template name="nav">
+    <view class="nav_link" bindtap="{{fn}}">
+        <button class="default-btn {{current== 0 ? '' : 'on_cor'}}" bindtap="{{fn}}">
+            <block wx:if="{{style == 0}}">
+                <icon class="iconfont {{ico}} del_ico idx_ico"></icon>
+                <view class="txt">{{name}}</view>
+            </block>
+            <block wx:if="{{style == 1}}">
+                <icon class="iconfont {{ico}} del_ico idx_ico"></icon>
+                <view class="txt">{{name}}</view>
+            </block>
+        </button>
+    </view>
+</template>

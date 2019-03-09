@@ -1,0 +1,66 @@
+<!--configPage.wxml-->
+<view class="container">
+
+    <view class="">
+        <!-- 用户 openid -->
+        <view class="userinfo">
+            <button
+                    open-type="getUserInfo"
+                    bindgetuserinfo="onGetUserInfo"
+                    class="userinfo-avatar"
+                    style="background-image: url({{avatarUrl}})"
+            ></button>
+            <view>
+                <button class="userinfo-nickname" bindtap="onGetOpenid">{{userInfo.nickName}}</button>
+            </view>
+        </view>
+        <view class="uploader">
+            <navigator url="../configPage/configPage" open-type="navigate" class="uploader-text">
+                <text>轮播配置页面</text>
+            </navigator>
+        </view>
+        <view class="uploader">
+            <navigator url="../goodsConfig/goodsConfig" open-type="navigate" class="uploader-text">
+                <text>小样配置页面</text>
+            </navigator>
+        </view>
+    </view>
+    <view class="bot_bar">
+        <navigator url="../index/index" open-type="navigate">
+            <view class="iconfont icon-home_light "></view>
+            Home
+        </navigator>
+        <navigator url="../configPage/configPage" open-type="navigate">
+            <view class="iconfont icon-emoji"></view>
+            Person
+        </navigator>
+    </view>
+
+
+    <!-- &lt;!&ndash; 上传图片 &ndash;&gt;
+     <view class="uploader">
+         <view class="uploader-text" bindtap="doUpload">
+             <text>上传图片</text>
+         </view>
+         <view class="uploader-container" wx:if="{{imgUrl}}">
+             <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+         </view>
+     </view>
+ -->
+
+    <!-- &lt;!&ndash; 操作数据库 &ndash;&gt;
+     <view class="uploader">
+         <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
+             <text>前端操作数据库</text>
+         </navigator>
+     </view>
+
+     &lt;!&ndash; 新建云函数 &ndash;&gt;
+     <view class="uploader">
+         <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
+             <text>快速新建云函数</text>
+         </navigator>
+     </view>-->
+    <!-- 新建云函数 -->
+
+</view>

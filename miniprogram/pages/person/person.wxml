@@ -1,0 +1,83 @@
+<!--configPage.wxml-->
+<view class="container">
+    <view class="person">
+        <!-- 用户 openid -->
+        <view class="person_vip">
+            <view class="user_avatar">
+                <image src="{{avatarUrl}}"></image>
+            </view>
+            <view class="user_info" wx-if="{{logged}}">
+              {{userInfo.nickName}}
+            </view>
+            <button class="user_info" wx-if="{{!logged}}" open-type="getUserInfo"
+                    bindgetuserinfo="onGetUserInfo">
+                点点获取更多权限
+            </button>
+        </view>
+        <view class="little_icons">
+            <view class="iconfont icon-appreciatefill" ></view>
+            <view class="iconfont icon-clothesfill"></view>
+            <view class="iconfont icon-emojifill"></view>
+            <view class="iconfont icon-sponsorfill"></view>
+        </view>
+    </view>
+    <view class="config" wx-if="{{logged}}" >
+        <view class="uploader">
+            <navigator url="../configPage/configPage" open-type="navigate" class="uploader-text">
+                <text class="iconfont icon-skin_light"></text>轮播配置页面
+            </navigator>
+        </view>
+        <view class="uploader">
+            <navigator url="../goodsConfig/goodsConfig" open-type="navigate" class="uploader-text">
+                <text class="iconfont icon-goods_hot_fill"></text>小样配置页面
+            </navigator>
+        </view>
+    </view>
+
+    <button wx-if="{{!logged}}"  style="text-align:center;margin-top:80rpx" open-type="getUserInfo"
+          bindgetuserinfo="onGetUserInfo">
+        <view class="iconfont icon-appreciatefill" style="font-size:120rpx;color:#d81e06">
+            <br/>
+        </view>
+        <block style="font-size:40rpx;display:block;color:#d81e06">
+            点一点，运气棒棒
+        </block>
+    </button>
+<!--    <view class="bot_bar">
+        <view  class="navigator" bindtap="goToHome">
+            <view class="iconfont icon-home_light"></view>
+            Home
+        </view>
+        <view class="navigator" bindtap="goToPerson" style="color:#fff">
+            <view class="iconfont icon-friend"></view>
+            Person
+        </view>
+    </view>-->
+
+    <!-- &lt;!&ndash; 上传图片 &ndash;&gt;
+     <view class="uploader">
+         <view class="uploader-text" bindtap="doUpload">
+             <text>上传图片</text>
+         </view>
+         <view class="uploader-container" wx:if="{{imgUrl}}">
+             <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+         </view>
+     </view>
+ -->
+
+    <!-- &lt;!&ndash; 操作数据库 &ndash;&gt;
+     <view class="uploader">
+         <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
+             <text>前端操作数据库</text>
+         </navigator>
+     </view>
+
+     &lt;!&ndash; 新建云函数 &ndash;&gt;
+     <view class="uploader">
+         <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
+             <text>快速新建云函数</text>
+         </navigator>
+     </view>-->
+    <!-- 新建云函数 -->
+
+</view>

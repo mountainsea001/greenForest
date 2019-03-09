@@ -1,0 +1,31 @@
+<!-- 轮播图信息上传 -->
+<view class="swiper-upload">
+    <view class="title">小样配置</view>
+
+    <text class="little_title">点击更新图片</text>
+    <view class="swiper-container">
+        <swiper indicator-color="#fff" indicator-active-color="#f50" indicator-dots="true" autoplay="true"
+                interval="50000" duration="100" circular="true" current="swiperCurrent" bindchange="swiperChange" class="swiper">
+            <block wx:for="{{imgUrls}}" wx:for-index="idx" wx:for-item="item" wx:key="index">
+                <swiper-item>
+                    <image src="{{item.swiperImg}}" class="img" bindtap="swipclick" id="{{item._id}}" goodId="{{item._id}}"/>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="upload_new">
+        <text class="little_title">上传新图片</text>
+        <view class="img_preview">
+            <image src="upload.png" bindtap="uploadGoodsImg">点击上传图片</image>
+        </view>
+        {{goodsImg}}
+        <image src="{{goodsImg}}" class="preview" wx-if="{{goodsImg}}" ></image>
+        <view class="desc">
+            <view class="section">
+                <input bindinput="bindKeyInput" placeholder="填写跳转地址"/>
+            </view>
+        </view>
+        <button bindtap="swiper_img2Db" class="btn">推送</button>
+    </view>
+</view>
+

@@ -1,0 +1,76 @@
+
+.swiper-upload{
+    margin-top: 1rem;
+    /*background: #ffffff;*/
+    /*margin: 0 0.48rem;*/
+}
+.title{
+    font-size: 1rem;
+}
+.little_title{
+    font-size: 0.72rem;
+    padding: 0.5rem 0;
+    display: block;
+}
+.desc{
+    margin-top: 1rem;
+}
+.desc input{
+    font-size: 0.72rem;
+    border-bottom: 1px solid #f50;
+}
+.upload_new button{
+    margin-top: 2rem;
+    width: 100%;
+    background: linear-gradient(to left, #FE9501, #FF6600);
+    background: -moz-linear-gradient(left, #FE9501 0%, #FF6600 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #FE9501), color-stop(100%, #FF6600));
+    background: -webkit-linear-gradient(left, #FE9501 0%, #FF6600 100%);
+    background: -o-linear-gradient(left, #FE9501 0%, #FF6600 100%);
+    background: -ms-linear-gradient(left, #FE9501 0%, #FF6600 100%);
+    color: #ffffff;
+}
+.preview{
+    height: 7rem;
+    width: 90%;
+    margin: 0 auto;
+}
+.swiper-upload .title{
+    text-align: center;
+}
+.swiper-upload .desc input{
+    text-align: left;
+}
+swiper {
+    height: 7rem;
+    width: 90%;
+    margin: 0 auto;
+    /* width: 100rpx;*/
+}
+.img_preview image{
+    width: 4rem;
+    height: 3rem;
+}
+swiper-item image {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-container {
+    position: relative;
+}
+
+.swiper-container .swiper {
+    height: 7rem;
+}
+
+.swiper-container .swiper .img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.56rem;
+}
+.btn{
+    height:2rem;
+    font-size:0.72rem;
+    line-height:2rem;
+}
